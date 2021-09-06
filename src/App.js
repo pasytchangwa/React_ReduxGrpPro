@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './App.css';
 import Header from './components/Layout/Header';
-import Profile from './components/Profile'
+import Profile from './components/Profile';
 import Missions from './components/Missions';
 
 
