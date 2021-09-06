@@ -1,11 +1,11 @@
 import './App.css';
-import Header from './components/Layout/Header';
+import Navbar from './components/layout/Navbar';
 
 function App() {
   return (
     <div>
-      <Header />
       <div className="container">
+        <Navbar />
         <h1>Hello, World!</h1>
       </div>
     </div>
