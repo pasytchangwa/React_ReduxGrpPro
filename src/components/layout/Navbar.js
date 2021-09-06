@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from './logo.png';
 
 const Navbar = ({ logo, title }) => (
@@ -12,13 +12,13 @@ const Navbar = ({ logo, title }) => (
     </h1>
     <ul>
       <li>
-        {/* <Link to="/">Rockets</Link> */}
+        <Link to="/">Rockets</Link>
       </li>
       <li>
-        {/* <Link to="/misions">Misions</Link> */}
+        <Link to="/missions">Missions</Link>
       </li>
       <li>
-        {/* <Link to="/myprofile">My Profile</Link> */}
+        <Link to="/myprofile">My Profile</Link>
       </li>
     </ul>
   </nav>

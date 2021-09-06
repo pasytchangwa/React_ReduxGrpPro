@@ -4,6 +4,7 @@
 :root {
   --primary-color: #dc3545;
   --dark-color: #333333;
+  --dark-color-900: #000000;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -73,13 +74,14 @@ img {
 }
 
 .navbar a {
-  color: #fff;
+  color: var(--dark-color-900);
   padding: 0.45rem;
   margin: 0 0.25rem;
+  text-decoration: none;
 }
 
 .navbar a:hover {
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 .navbar .welcome span {
