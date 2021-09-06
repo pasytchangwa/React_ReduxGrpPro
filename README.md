@@ -6,10 +6,7 @@
 
 ## Built With
 
-- Vanilla JavaScript
-- Bootstrap 5
-- Webpack
-- Jest
+- React Redux
 
 ## Live Demo
 
