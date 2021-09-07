@@ -11,50 +11,43 @@ const Missions = () => {
   }, []);
 
   return (
-    <section className="ftco-section">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="table-wrap">
-              <table className="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Mission</th>
-                    <th>Description</th>
-                    <th>Status</th>
-                    <th>{'    '}</th>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12">
+          <div className="table-wrap">
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Mission</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                  <th>{'    '}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {list.map((mission) => (
+                  <tr key={mission.id}>
+                    <th scope="row">{mission.mission_name}</th>
+                    <td>{mission.description}</td>
+                    <td>
+                      <span className="badge bg-success">Active Member</span>
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        className="btn btn-outline-secondary"
+                      >
+                        Join mission
+                      </button>
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {list.map((mission) => (
-                    <tr key={mission.id}>
-                      <th scope="row">{mission.mission_name}</th>
-                      <td>{mission.description}</td>
-                      <td>
-                        <button
-                          type="button"
-                          className="btn btn-primary btn-sm"
-                        >
-                          Active Member
-                        </button>
-                      </td>
-                      <td>
-                        <button
-                          type="button"
-                          className="btn btn-primary btn-sm"
-                        >
-                          Join Mission
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
