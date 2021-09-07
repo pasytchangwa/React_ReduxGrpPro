@@ -1,4 +1,8 @@
 import React, { useEffect } from 'react';
+import Container from 'react-bootstrap/Container';
+import Table from 'react-bootstrap/Table';
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadMissions } from '../store/missions';
 
@@ -11,42 +15,36 @@ const Missions = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <div className="table-wrap">
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Mission</th>
-                  <th>Description</th>
-                  <th>Status</th>
-                  <th>{'    '}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {list.map((mission) => (
-                  <tr key={mission.id}>
-                    <th scope="row">{mission.mission_name}</th>
-                    <td>{mission.description}</td>
-                    <td>
-                      <span className="badge bg-success">Active Member</span>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        className="btn btn-outline-secondary"
-                      >
-                        Join mission
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+    <div>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>{'    '}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {list.map((mission) => (
+            <tr key={mission.id}>
+              <td>
+                <p className="fw-bold">{mission.mission_name}</p>
+              </td>
+              <td>
+                <p>{mission.description}</p>
+              </td>
+              <td className="align-middle">
+                <Badge bg="success">Active member</Badge>
+              </td>
+              <td className="col-2 align-middle text-center">
+                <Button variant="outline-danger">Leave Mission</Button>
+                {' '}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
     </div>
   );
 };
