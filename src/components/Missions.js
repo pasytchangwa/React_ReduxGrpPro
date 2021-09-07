@@ -26,10 +26,10 @@ const Missions = () => {
             <div className="pb border">{mission.description}</div>
             <div>
               {mission.join && (
-                <div className="badge bg-success">Active Member</div>
+                <div className="mbtn bg-success">Active Member</div>
               )}
               {!mission.join && (
-                <div className="badge bg-dark">NOT A MEMBER</div>
+                <div className="mbtn bg-dark">NOT A MEMBER</div>
               )}
             </div>
             <div>
