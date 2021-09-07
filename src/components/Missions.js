@@ -10,6 +10,7 @@ const Missions = () => {
     if (!list.length) dispatch(loadMissions());
   }, []);
 
+
   return (
     <div>
       <h1>Missions</h1>
@@ -33,24 +34,17 @@ const Missions = () => {
               )}
             </div>
             <div>
-              {!mission.join && (
-                <button
-                  type="button"
-                  onClick={() => dispatch(joinMission({ id: mission.id }))}
-                  className="btn outline-secondary btn-sm"
-                >
-                  Join Mission
-                </button>
-              )}
-              {mission.join && (
-                <button
-                  type="button"
-                  onClick={() => dispatch(joinMission({ id: mission.id }))}
-                  className="btn outline-danger btn-sm"
-                >
-                  Leave Mission
-                </button>
-              )}
+              <button
+                type="button"
+                onClick={() => dispatch(joinMission({ id: mission.mission_id }))}
+                className={
+                  mission.join
+                    ? 'btn outline-danger btn-sm'
+                    : 'btn outline-secondary btn-sm'
+                }
+              >
+                {mission.join ? 'Leave Mission' : 'Join Mission'}
+              </button>
             </div>
           </div>
         ))}

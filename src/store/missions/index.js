@@ -16,8 +16,8 @@ export const missionSlice = createSlice({
 
     missionReceived: (mission, action) => {
       mission.list = action.payload.map((mission) => ({
-        mission_id: mission.id,
-        mission_name: mission.mission_name,
+        id: mission.mission_id,
+        name: mission.mission_name,
         description: mission.description,
         join: false,
       }));
@@ -29,7 +29,7 @@ export const missionSlice = createSlice({
     },
     joinMission: (mission, action) => {
       const index = mission.list.findIndex(
-        (mission) => mission.id === action.payload.id
+        (mission) => mission.mission_id === action.payload.id
       );
       mission.list[index].join = !mission.list[index].join;
     },

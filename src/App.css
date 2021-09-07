@@ -189,7 +189,7 @@ img {
 
 .grid {
   display: grid;
-  grid-template-columns: 90px 700px 125px 155px;
+  grid-template-columns: 90px 700px 125px auto;
   align-items: center;
 }
 
