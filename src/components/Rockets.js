@@ -4,10 +4,10 @@ import { loadRockets, reserveRocket } from '../store/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  const { list } = useSelector((state) => state.rockets);
+  const list = useSelector((state) => state.rockets.list);
 
   useEffect(() => {
-    dispatch(loadRockets());
+    if (!list.length) dispatch(loadRockets());
   }, []);
 
   return (
