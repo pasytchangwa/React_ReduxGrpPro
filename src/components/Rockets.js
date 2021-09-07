@@ -16,9 +16,16 @@ const Rockets = () => {
       <ul>
         {list.map((rocket) => (
           <li key={rocket.id}>
-            <h3>{rocket.rocket_name}</h3>
-            <p>{rocket.description}</p>
-            <img src={rocket.flickr_images} alt={rocket.rocket_name} />
+            <div className="card">
+              <img
+                className="round-img"
+                style={{ width: '220px' }}
+                src={rocket.flickr_images}
+                alt={rocket.rocket_name}
+              />
+              <h3>{rocket.rocket_name}</h3>
+              <p>{rocket.description}</p>
+            </div>
           </li>
         ))}
       </ul>
