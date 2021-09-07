@@ -8,20 +8,18 @@ function Profile() {
   return (
     <div>
       <h1>My Profile</h1>
-      <div className="flex">
+      <div className="grid-2">
         <div>
           <h3>My missions</h3>
           <ul>
-            {filterRockets.map((rocket) => (
-              <li key={rocket.id}>{rocket.name}</li>
-            ))}
+            <li>missions...</li>
           </ul>
         </div>
         <div>
           <h3>My rockets</h3>
-          <ul>
+          <ul className="list">
             {filterRockets.map((rocket) => (
-              <li key={rocket.id}>{rocket.name}</li>
+              <li className="text-dark text-bold p-1" key={rocket.id}>{rocket.name}</li>
             ))}
           </ul>
         </div>

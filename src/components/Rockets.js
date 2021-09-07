@@ -24,14 +24,20 @@ const Rockets = () => {
                 alt={rocket.name}
               />
               <div>
-                <div className="card-head">
-                  {rocket.reserved && <div className="badge bg-success">Reserved</div>}
+                <div className="flex-justify-between">
                   <div className="large">{rocket.name}</div>
+                  <div>{rocket.reserved && <div className="badge bg-success">Reserved</div>}</div>
                 </div>
                 <p className="text-dark my-1">
                   {rocket.description}
                 </p>
-                <button onClick={() => dispatch(reserveRocket({ id: rocket.id }))} type="button" className="btn btn-primary btn-sm">{!rocket.resolved ? 'Reserve Rocket' : 'Cancel'}</button>
+                <button
+                  type="button"
+                  onClick={() => dispatch(reserveRocket({ id: rocket.id }))}
+                  className={rocket.reserved ? 'btn btn-light' : 'btn btn-primary'}
+                >
+                  {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+                </button>
               </div>
             </div>
           </li>
