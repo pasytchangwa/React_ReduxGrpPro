@@ -12,8 +12,8 @@ function Profile() {
         <div>
           <h3>My missions</h3>
           <ul>
-            {filterRockets.map((rocket) => (
-              <li key={rocket.id}>{rocket.name}</li>
+            {filterRockets.map((mission) => (
+              <li key={mission.id}>{mission.name}</li>
             ))}
           </ul>
         </div>
