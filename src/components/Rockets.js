@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadRockets } from '../store/rockets';
+import { loadRockets, reserveRocket } from '../store/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -20,16 +20,18 @@ const Rockets = () => {
               <img
                 className="round-img"
                 style={{ width: '220px' }}
-                src={rocket.flickr_images}
-                alt={rocket.rocket_name}
+                src={rocket.image}
+                alt={rocket.name}
               />
               <div>
-                <h3 className="large">{rocket.rocket_name}</h3>
+                <div className="card-head">
+                  {rocket.reserved && <div className="badge bg-success">Reserved</div>}
+                  <div className="large">{rocket.name}</div>
+                </div>
                 <p className="text-dark my-1">
-                  <span className="badge bg-success">Reserved</span>
                   {rocket.description}
                 </p>
-                <button type="button" className="btn btn-primary btn-sm">Reserve Rocket</button>
+                <button onClick={() => dispatch(reserveRocket({ id: rocket.id }))} type="button" className="btn btn-primary btn-sm">{!rocket.resolved ? 'Reserve Rocket' : 'Cancel'}</button>
               </div>
             </div>
           </li>
