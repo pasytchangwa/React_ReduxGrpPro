@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "bootstrap": "^5.1.0",
     "axios": "^0.21.4",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -22,7 +23,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint .",
+    "stylelint": "npx stylelint \"**/*.{css,scss}\"",
+    "lint": "npm run eslint && npm run stylelint"
   },
   "eslintConfig": {
     "extends": [
