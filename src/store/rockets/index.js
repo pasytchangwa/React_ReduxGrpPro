@@ -17,7 +17,6 @@ export const rocketSlice = createSlice({
     rocketReceived: (rocket, action) => {
       rocket.list = action.payload;
       rocket.loading = false;
-      rocket.lastFetch = Date.now();
     },
 
     rocketRequestFailed: (rocket) => {
