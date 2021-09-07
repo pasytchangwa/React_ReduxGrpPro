@@ -396,14 +396,13 @@ img {
   border: #ccc solid 1px;
 }
 
-/* mission Active and not memeber btn */
 .mbtn {
   display: inline-block;
   font-size: 0.7rem;
   padding: 0.1rem 0.8rem;
   text-align: center;
   margin: 0.5rem;
-  background: var(--light-color);
-  color: #333;
+  color: #fff;
   border-radius: 5px;
 }
+

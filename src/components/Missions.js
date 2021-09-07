@@ -33,7 +33,7 @@ const Missions = () => {
               )}
             </div>
             <div>
-              {mission.join && (
+              {!mission.join && (
                 <button
                   type="button"
                   onClick={() => dispatch(joinMission({ id: mission.id }))}
@@ -42,7 +42,7 @@ const Missions = () => {
                   Join Mission
                 </button>
               )}
-              {!mission.join && (
+              {mission.join && (
                 <button
                   type="button"
                   onClick={() => dispatch(joinMission({ id: mission.id }))}
