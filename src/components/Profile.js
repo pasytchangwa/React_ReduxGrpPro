@@ -6,7 +6,7 @@ function Profile() {
   const missions = useSelector((state) => state.missions.list);
 
   const filterRockets = rockets.filter((rocket) => rocket.reserved);
-  const filterMissions = missions.filter((mission) => mission.joinMission);
+  const filterMissions = missions.filter((mission) => mission.join);
   return (
     <div>
       <h1>My Profile</h1>
@@ -16,7 +16,7 @@ function Profile() {
             My missions{' '}
             {missions.length !== 0 && <span>({filterMissions.length})</span>}
           </h3>
-          <ul>
+          <ul className="list">
             {missions.length === 0 && (
               <p className="alert">Please, join a mission on Missions page</p>
             )}
