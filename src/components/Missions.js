@@ -11,19 +11,50 @@ const Missions = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Missions</h1>
-      <ul>
-        {list.map((mission) => (
-          <li key={mission.id}>
-            <div className="card">
-              <h3>{mission.mission_name}</h3>
-              <p>{mission.description}</p>
+    <section className="ftco-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="table-wrap">
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Mission</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>{'    '}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {list.map((mission) => (
+                    <tr key={mission.id}>
+                      <th scope="row">{mission.mission_name}</th>
+                      <td>{mission.description}</td>
+                      <td>
+                        <button
+                          type="button"
+                          className="btn btn-primary btn-sm"
+                        >
+                          Active Member
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          className="btn btn-primary btn-sm"
+                        >
+                          Join Mission
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
