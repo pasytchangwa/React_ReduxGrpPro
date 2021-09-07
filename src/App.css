@@ -87,3 +87,19 @@ img {
 .navbar .welcome span {
   margin-right: 0.6rem;
 }
+
+/* Cards */
+.card {
+  padding: 1rem;
+  border: #ccc 1px dotted;
+  margin: 0.7rem 0;
+}
+
+/* List */
+.list {
+  margin: 0.5rem 0;
+}
+
+.list li {
+  padding-bottom: 0.3rem;
+}
