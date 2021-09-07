@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadMissions } from '../store/missions';
+import { loadMissions, joinMission } from '../store/missions';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const { list } = useSelector((state) => state.missions);
+  const list  = useSelector((state) => state.missions.list);
 
   useEffect(() => {
-    dispatch(loadMissions());
+    if (!list.length) dispatch(loadMissions());
   }, []);
 
   return (
@@ -25,12 +25,32 @@ const Missions = () => {
             <div className="text-bold">{mission.mission_name}</div>
             <div className="pb border">{mission.description}</div>
             <div>
-              <div className="badge bg-dark">NOT A MEMBER</div>
+              {mission.join && (
+                <div className="badge bg-success">Active Member</div>
+              )}
+              {!mission.join && (
+                <div className="badge bg-dark">NOT A MEMBER</div>
+              )}
             </div>
             <div>
-              <button type="button" className="btn btn-sm btn-primary">
-                Join mission
-              </button>
+              {mission.join && (
+                <button
+                  type="button"
+                  onClick={() => dispatch(joinMission({ id: mission.id }))}
+                  className="btn outline-secondary btn-sm"
+                >
+                  Join Mission'
+                </button>
+              )}
+              {!mission.join && (
+                <button
+                  type="button"
+                  onClick={() => dispatch(joinMission({ id: mission.id }))}
+                  className="btn outline-danger btn-sm"
+                >
+                  Leave Mission
+                </button>
+              )}
             </div>
           </div>
         ))}
