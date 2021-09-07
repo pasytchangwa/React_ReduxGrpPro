@@ -14,20 +14,24 @@ const Missions = () => {
     <div>
       <h1>Missions</h1>
       <div>
-        <div className="flex">
-          <div>Misson</div>
-          <div>Description</div>
-          <div>Status</div>
-          <div>Action</div>
+        <div className="grid border">
+          <div className="text-left text-bold border">Mission</div>
+          <div className="text-left text-bold border">Description</div>
+          <div className="text-left text-bold">Status</div>
+          <div className="text-left text-bold">Action</div>
         </div>
         {list.map((mission) => (
-          <div key={mission.id} className="flex m-2">
-            <div>{mission.mission_name}</div>
-            <div>{mission.description}</div>
+          <div key={mission.id} className="grid border">
+            <div className="text-bold">{mission.mission_name}</div>
+            <div className="pb border">{mission.description}</div>
             <div>
-              <div className="badge bg-dark">not a memebr</div>
+              <div className="badge bg-dark">NOT A MEMBER</div>
             </div>
-            <div><button type="button" className="btn btn-sm btn-primary">Join mission</button></div>
+            <div>
+              <button type="button" className="btn btn-sm btn-primary">
+                Join mission
+              </button>
+            </div>
           </div>
         ))}
       </div>
