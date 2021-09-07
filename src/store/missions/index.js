@@ -25,8 +25,7 @@ export const missionSlice = createSlice({
   },
 });
 
-export const { missionRequested, missionReceived, missionRequestFailed } =
-  missionSlice.actions;
+export const { missionRequested, missionReceived, missionRequestFailed } = missionSlice.actions;
 export default missionSlice.reducer;
 
 export const loadMissions = () => (dispatch) => {
@@ -37,6 +36,6 @@ export const loadMissions = () => (dispatch) => {
       onStart: missionRequested.type,
       onSuccess: missionReceived.type,
       onError: missionRequestFailed.type,
-    })
+    }),
   );
 };
