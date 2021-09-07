@@ -15,7 +15,12 @@ export const missionSlice = createSlice({
     },
 
     missionReceived: (mission, action) => {
-      mission.list = action.payload;
+      mission.list = action.payload.map((mission) =>({
+        mission_id: mission.id,
+        mission_name: mission.mission_name,
+        description: mission.description,
+        join: false,
+      }));
       mission.loading = false;
     },
 
