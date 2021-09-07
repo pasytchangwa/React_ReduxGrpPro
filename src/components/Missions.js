@@ -39,7 +39,7 @@ const Missions = () => {
                   onClick={() => dispatch(joinMission({ id: mission.id }))}
                   className="btn outline-secondary btn-sm"
                 >
-                  Join Mission'
+                  Join Mission
                 </button>
               )}
               {!mission.join && (
