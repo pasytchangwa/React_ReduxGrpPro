@@ -16,8 +16,19 @@ function Profile() {
           </ul>
         </div>
         <div>
-          <h3>My rockets</h3>
+          <h3>
+            My rockets
+            {' '}
+            {rockets.length !== 0 && (
+            <span>
+              (
+              {filterRockets.length}
+              )
+            </span>
+            )}
+          </h3>
           <ul className="list">
+            {rockets.length === 0 && <p className="alert">Please, make reservation on Rockets page</p> }
             {filterRockets.map((rocket) => (
               <li className="text-dark text-bold p-1" key={rocket.id}>{rocket.name}</li>
             ))}
