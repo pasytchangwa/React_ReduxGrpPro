@@ -318,22 +318,6 @@ img {
   border-radius: 5px;
 }
 
-.mbtn {
-  display: inline-block;
-  font-size: 0.7rem;
-  padding: 0.1rem 0.8rem;
-  text-align: center;
-  margin: 0.5rem;
-  background: var(--light-color);
-  color: #333;
-  border-radius: 5px;
-}
-
-.high {
-  height: 100%;
-  border: 1pc solid grey;
-}
-
 .alert {
   padding: 0.7rem;
   margin: 1rem 0;
@@ -410,4 +394,16 @@ img {
 .bg-light,
 .badge-light {
   border: #ccc solid 1px;
+}
+
+/* mission Active and not memeber btn */
+.mbtn {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.8rem;
+  text-align: center;
+  margin: 0.5rem;
+  background: var(--light-color);
+  color: #333;
+  border-radius: 5px;
 }
