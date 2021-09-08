@@ -13,6 +13,7 @@ import App from '../../App';
 jest.mock('../Rockets');
 jest.mock('../Navbar');
 jest.mock('../Profile');
+jest.mock('../Missions');
 
 describe('Test for Navbar component', () => {
   test('Rockets navbar render', () => {
@@ -51,5 +52,16 @@ describe('Profile component', () => {
   test('Rockets button render', () => {
     const app = render(<App />);
     expect(app.getByText(/First Rocket/)).toBeInTheDocument;
+  });
+});
+
+describe('Missions component', () => {
+  test('Missions title render', () => {
+    const app = render(<App />);
+    expect(app.getByText('Thaicom')).toBeInTheDocument;
+  });
+  test('Missions button render', () => {
+    const app = render(<App />);
+    expect(app.getByText(/Join Mission/)).toBeInTheDocument;
   });
 });
