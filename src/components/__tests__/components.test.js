@@ -5,8 +5,7 @@
  */
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom/extend-expect';
 
 import App from '../../App';
 
@@ -39,28 +38,5 @@ describe('Rockets component', () => {
   test('Rockets button render', () => {
     const app = render(<App />);
     expect(app.getByText(/Reserve Rocket/)).toBeInTheDocument;
-  });
-});
-
-describe('Profile component', () => {
-  test('Profile title render ', () => {
-    const app = render(<App />);
-    userEvent.click(app.getByText('My Profile'));
-    expect(app.getByText(/First mission/)).toBeInTheDocument;
-  });
-  test('Rockets button render', () => {
-    const app = render(<App />);
-    expect(app.getByText(/First Rocket/)).toBeInTheDocument;
-  });
-});
-
-describe('Missions component', () => {
-  test('Missions title render', () => {
-    const app = render(<App />);
-    expect(app.getByText('Thaicom')).toBeInTheDocument;
-  });
-  test('Missions button render', () => {
-    const app = render(<App />);
-    expect(app.getByText(/Join Mission/)).toBeInTheDocument;
   });
 });

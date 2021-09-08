@@ -11,8 +11,8 @@ import Profile from './components/Profile';
 function App() {
   return (
     <Router>
+      <Navbar />
       <div className="container">
-        <Navbar />
         <Switch>
           <Provider store={store}>
             <Route exact path="/" component={Rockets} />

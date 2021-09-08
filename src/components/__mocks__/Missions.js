@@ -17,7 +17,7 @@ const Missions = () => (
       <div />
     </div>
     <div>
-      <button type="button" className='btn outline-secondary btn-sm'>
+      <button type="button" className="btn outline-secondary btn-sm">
         Join Mission
       </button>
     </div>
