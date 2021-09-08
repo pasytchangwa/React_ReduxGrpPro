@@ -36,7 +36,7 @@ const Missions = () => {
             <div>
               <button
                 type="button"
-                onClick={() => dispatch(joinMission({ id: mission.mission_id }))}
+                onClick={() => dispatch(joinMission({ id: mission.id }))}
                 className={
                   mission.join
                     ? 'btn outline-danger btn-sm'

@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable import/prefer-default-export */
 import { createSlice } from '@reduxjs/toolkit';
 import { apiCallBegan } from '../api';
 
@@ -29,7 +28,7 @@ export const missionSlice = createSlice({
     },
     joinMission: (mission, action) => {
       const index = mission.list.findIndex(
-        (mission) => mission.mission_id === action.payload.id,
+        (mission) => mission.id === action.payload.id,
       );
       mission.list[index].join = !mission.list[index].join;
     },
