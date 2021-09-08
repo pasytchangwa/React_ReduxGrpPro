@@ -23,7 +23,6 @@ export const missionSlice = createSlice({
       }));
       mission.loading = false;
     },
-
     missionRequestFailed: (mission) => {
       mission.loading = false;
     },
