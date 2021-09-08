@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Redux Group project - SpaceX API
 
-## Available Scripts
+> In this task, you will be working with the real live data from the SpaceX API. Your task is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
-In the project directory, you can run:
+![**screenshot––**](App_Screenshot.png)
 
-### `yarn start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- Redux
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Live Demo
 
-### `yarn test`
+This is the video that I and my partner recorded for this project:
+[LiveDemo](https://drive.google.com/file/d/1-_X3rEguAOuHDakIX1hgUE12tuts5p1P/view?usp=sharing)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `yarn build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Chrome browser
+- Node v14.XX >
+- npm (usually already installed with current node version)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+e link, you will be able to add a task to the default job list**immediately
+**Otherwise, you can create a new list in the most left input field and add a new task to the current list.**
 
-### `yarn eject`
+To get a local copy up and running, follow these simple example steps.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Chrome browser
+- Node v14.XX >
+- npm (usually already installed with current node version)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Setup
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To run code locally, please follow steps belove
 
-## Learn More
+1. `git@github.com:pasytchangwa/React_ReduxGrpPro.git && cd React_ReduxGrpPro`
+2. run `npm install`
+3. then run `npm run start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+webpack will automatically open the default browser, and you can start using the TV Show web app. All data is remotely over 3rd party API.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Usage
 
-### Code Splitting
+At home page pres on 'hart' and like will be recorded
+The modal is open to finding details and the form to live your comment or read other people's comments by clicking on the comment button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Run tests
 
-### Analyzing the Bundle Size
+To test for add and remove a task, you need to install Jest or run `npm install'
+`npm run test`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Authors
 
-### Making a Progressive Web App
+👤 MARIJAN BRVAR
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- GitHub: [@githubhandle](https://github.com/marijanbrvar)
+- Twitter: [@twitterhandle](https://twitter.com/marijanbrvar)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/marijanbrvar)
 
-### Advanced Configuration
+![Marijan's GitHub stats](https://github-readme-stats.vercel.app/api?username=marijanbrvar&count_private=true&theme=dark&show_icons=true)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **Sylvestre**
 
-### Deployment
+- GitHub: [@pasytchangwa](https://github.com/pasytchangwa)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing
 
-### `yarn build` fails to minify
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to check the [issues page](https://github.com/marijanbrvar/CP_TV-_Maze/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://github.com/marijanbrvar/CP_TV-_Maze/blob/feature/LICENSE) licensed.
