@@ -11,7 +11,6 @@ import userEvent from '@testing-library/user-event';
 import App from '../../App';
 
 jest.mock('../Rockets');
-jest.mock('../Navbar');
 jest.mock('../Profile');
 
 describe('Test for Navbar component', () => {
