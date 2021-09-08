@@ -406,3 +406,6 @@ img {
   border-radius: 5px;
 }
 
+.divel:nth-child(even) {
+  background-color: var(--light-color);
+}
