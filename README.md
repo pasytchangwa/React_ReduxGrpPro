@@ -18,9 +18,6 @@ This is the video that I and my partner recorded for this project:
 
 ## Getting Started
 
-**When you open the application from the above link, you can find a short listing of 6 TV Shows** immediately
-**On this main page, you can click on 'Hart' if you like TV Show, or click on the comment button to see details and live comment.**
-
 ### Prerequisites
 
 - Chrome browser
