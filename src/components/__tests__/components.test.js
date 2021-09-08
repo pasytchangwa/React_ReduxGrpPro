@@ -43,9 +43,9 @@ describe('Rockets component', () => {
 });
 
 describe('Profile component', () => {
-  const app = render(<App />);
-  // userEvent.click(app.getByText('My Profile'));
   test('Profile title render ', () => {
+    const app = render(<App />);
+    userEvent.click(app.getByText('My Profile'));
     expect(app.getByText(/First mission/)).toBeInTheDocument;
   });
   test('Rockets button render', () => {
