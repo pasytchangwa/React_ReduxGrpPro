@@ -164,6 +164,14 @@ img {
   border: 1px solid grey;
 }
 
+.border-botom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
 /* List */
 .list {
   margin: 0.5rem 0;
@@ -191,6 +199,10 @@ img {
   display: grid;
   grid-template-columns: 90px 700px 125px auto;
   align-items: center;
+}
+
+.grid .align-top {
+  align-self: flex-start;
 }
 
 .flexjustify {
@@ -405,4 +417,3 @@ img {
   color: #fff;
   border-radius: 5px;
 }
-

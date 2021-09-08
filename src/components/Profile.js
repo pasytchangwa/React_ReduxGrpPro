@@ -13,8 +13,15 @@ function Profile() {
       <div className="grid-2">
         <div>
           <h3>
-            My missions{' '}
-            {missions.length !== 0 && <span>({filterMissions.length})</span>}
+            My missions
+            {' '}
+            {missions.length !== 0 && (
+            <span>
+              (
+              {filterMissions.length}
+              )
+            </span>
+            )}
           </h3>
           <ul className="list">
             {missions.length === 0 && (
@@ -29,8 +36,15 @@ function Profile() {
         </div>
         <div>
           <h3>
-            My rockets{' '}
-            {rockets.length !== 0 && <span>({filterRockets.length})</span>}
+            My rockets
+            {' '}
+            {rockets.length !== 0 && (
+            <span>
+              (
+              {filterRockets.length}
+              )
+            </span>
+            )}
           </h3>
           <ul className="list">
             {rockets.length === 0 && (
