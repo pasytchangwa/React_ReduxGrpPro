@@ -22,8 +22,8 @@ const Missions = () => {
           <div className="text-left text-bold">Action</div>
         </div>
         {list.map((mission) => (
-          <div key={mission.id} className="grid border">
-            <div className="text-bold">{mission.mission_name}</div>
+          <div key={mission.id} className="grid border divel">
+            <div className="text-bold">{mission.name}</div>
             <div className="pb border">{mission.description}</div>
             <div>
               {mission.join && (
