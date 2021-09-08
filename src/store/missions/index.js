@@ -16,8 +16,8 @@ export const missionSlice = createSlice({
 
     missionReceived: (mission, action) => {
       mission.list = action.payload.map((mission) => ({
-        mission_id: mission.id,
-        mission_name: mission.mission_name,
+        id: mission.mission_id,
+        name: mission.mission_name,
         description: mission.description,
         join: false,
       }));
@@ -27,10 +27,18 @@ export const missionSlice = createSlice({
     missionRequestFailed: (mission) => {
       mission.loading = false;
     },
+    joinMission: (mission, action) => {
+      const index = mission.list.findIndex(
+        (mission) => mission.mission_id === action.payload.id,
+      );
+      mission.list[index].join = !mission.list[index].join;
+    },
   },
 });
 
-export const { missionRequested, missionReceived, missionRequestFailed } = missionSlice.actions;
+export const {
+  missionRequested, missionReceived, missionRequestFailed, joinMission,
+} = missionSlice.actions;
 export default missionSlice.reducer;
 
 export const loadMissions = () => (dispatch) => {

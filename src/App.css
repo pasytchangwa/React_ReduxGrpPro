@@ -189,13 +189,18 @@ img {
 
 .grid {
   display: grid;
-  grid-template-columns: 90px 700px 135px 1fr;
+  grid-template-columns: 90px 700px 125px auto;
   align-items: center;
 }
 
 .flexjustify {
   display: flex;
   justify-content: space-between;
+}
+
+.justifyself {
+  display: flex;
+  justify-self: start;
 }
 
 .round-img {
@@ -313,11 +318,6 @@ img {
   border-radius: 5px;
 }
 
-.high {
-  height: 100%;
-  border: 1pc solid grey;
-}
-
 .alert {
   padding: 0.7rem;
   margin: 1rem 0;
@@ -332,6 +332,18 @@ img {
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
+}
+
+.outline-secondary {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.outline-danger {
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
 }
 
 .btn-light,
@@ -383,3 +395,14 @@ img {
 .badge-light {
   border: #ccc solid 1px;
 }
+
+.mbtn {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.8rem;
+  text-align: center;
+  margin: 0.5rem;
+  color: #fff;
+  border-radius: 5px;
+}
+
